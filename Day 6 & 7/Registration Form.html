@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    select {
+        font-size: larger;
+    }
+
+    body {
+        background-image: url(man.jpg);
+    }
+
+    label {
+        font-size: x-large;
+    }
+
+    table {
+        background-color: rgba(202, 199, 199, 0.341);
+        backdrop-filter: blur(7px);
+    }
+
+    input {
+        font-size: x-large;
+    }
+
+    td {
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <center>
+        <h1>Registration Form</h1>
+        <table border="5" style="border-radius: 8px; color: rgb(6, 10, 10);">
+            <form action="login.html">
+                <tr>
+                    <td>
+                        <label class="fa fa-user"> FIRST NAME</label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtFirstName" placeholder="First Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-user"> MIDDLE NAME</label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtMiddleName" placeholder="Middle Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-user"> LAST NAME</label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtLastName" placeholder="Last Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-envelope"> Email</label>
+                    </td>
+                    <td>
+                        <input type="email" placeholder="Email" id="Email" size="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-phone-square"> Phone Number</label>
+                    </td>
+                    <td>
+                        <input type="tel" id="Phone" name="phone" placeholder="123-45-678" maxlength="10" minlength="10"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-venus-mars"> Gender</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="Gender" value="Male">Male
+                        <input type="radio" name="gender" id="Gender" value="Female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-line-chart"> Age</label>
+                    </td>
+                    <td>
+                        <input type="tel" placeholder="Age" id="Age" maxlength="3" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-calendar-check-o"> Date of Birth</label>
+                    </td>
+                    <td>
+                        <input type="date" id="DOB">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-list"> Select Your Streem</label>
+                    </td>
+                    <td>
+                        <select>
+                            <option>IT</option>
+                            <option>COMPUTER </option>
+                            <option>MICANICAL</option>
+                            <option>CIVIL</option>
+                            <option>ELECTRICAL</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-question"> Name Of privious Collage?</label>
+                    </td>
+                    <td>
+                        <input type="text" id="lastclgname" placeholder="Name privious collage?" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-question"> What is your hobby?</label>
+                    </td>
+                    <td>
+                        <input type="text" id="Hobby" placeholder="Hobby" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-lock"> Password (8 characters minimum)</label>
+                    </td>
+                    <td>
+                        <input type="password" id="Password1" placeholder="Password" minlength="8" required>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-unlock-alt"> Confirm Password</label>
+                    </td>
+                    <td>
+                        <input type="password" id="Password2" placeholder="Confirm Password" minlength="8" required>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-address-card"> Address</label>
+                    </td>
+                    <td>
+                        <textarea id="Address" cols="38" rows="2" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fa fa-map-pin"> Pincode</label>
+                    </td>
+                    <td>
+                        <input type="tel" id="Pincode" placeholder="Pincode" maxlength="6" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <i class="fa fa-check-circle"></i>
+                        <input type="checkbox" id="T&C" required>
+                        <label> Accept our T&C?</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit">
+                        <input type="reset">
+                    </td>
+                </tr>
+
+
+            </form>
+        </table>
+    </center>
+</body>
