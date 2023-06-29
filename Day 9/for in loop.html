@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> For In Loop</h2>
+<p id="student"></p>
+
+<script>
+const person = {fname:"upasana", lname:"parekh", age:22}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("student").innerHTML = txt;
+</script>
+
+</body>
+</html>
+

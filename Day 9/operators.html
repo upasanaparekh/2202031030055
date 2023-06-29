@@ -1,0 +1,51 @@
+<html>
+<h3> arithmetic operators </h3>
+<p id="sum"></p>
+<p id="sub"></p>
+<p id="mul"></p>
+<p id="div"></p>
+<script>
+var a=5;var b = 4;var c=a+b;var d=a-b;var e=a*b;var f=a/b;
+document.getElementById("sum").innerHTML =" a + b ="+c;
+document.getElementById("sub").innerHTML =" a - b ="+d;
+document.getElementById("mul").innerHTML =" a * b ="+e;
+document.getElementById("div").innerHTML =" a / b ="+f;
+</script>
+<h3> comparision operators </h3>
+<p id="equal"></p>
+<p id="not equal"></p>
+<p id="greater"></p>
+<script>
+var x=8; y=x==8;z=9;a=x!=z;b=x>z;
+document.getElementById("equal").innerHTML =" x==8 ="+y;
+document.getElementById("not equal").innerHTML ="x!=8 ="+a;
+document.getElementById("greater").innerHTML ="x > z ="+b;
+</script>
+<h3> assigmnment operators </h3>
+<p id="assign"></p>
+<p id="plus"></p>
+<p id="eplus"></p>
+<script>
+var x=10;y=20+x;z=x+=5;
+document.getElementById("assign").innerHTML =" value of x="+x;
+document.getElementById("plus").innerHTML ="value of y+x="+y;
+document.getElementById("eplus").innerHTML ="value of x+=5="+z;
+</script>
+<h3> logical operators </h3>
+<p id="land"></p>
+<p id="lor"></p>
+<script>
+var x=true;y=false;z=x&&y;a=x||y;
+document.getElementById("land").innerHTML =" value of x && y="+z;
+document.getElementById("lor").innerHTML ="value of x || y="+a;
+</script>
+<h3>bitwise operators </h3>
+<p id="band"></p>
+<p id="bor"></p>
+<script>
+var x=2;y=3;z=x >> y;c=x & y;
+document.getElementById("band").innerHTML ="x >> y= "+z;
+document.getElementById("bor").innerHTML =" x & y="+c;
+</script>
+</body>
+</html>

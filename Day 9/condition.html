@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///C:/Users/Upashna/Downloads/condition.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+
+<h2>using js if....else</h2>
+
+<p>check the number is greater than 5 or smaller ????</p>
+
+<p id="demo">no. is greater</p>
+
+<script>
+var num=9;
+if ( num>5) {
+  msg = "no. is greater";
+} else {
+  msg = "no. is smaller";
+}
+
+document.getElementById("demo").innerHTML = msg;
+</script>
+<p id="num">no. is equal</p>
+<script>
+var num=11;
+if ( num>11) {
+  msg = "no. is greater";
+} 
+else if ( num<11) {
+  msg = "no. is smaller";
+}
+else if ( num==11){
+ msg = "no. is equal";
+}
+else {
+  msg ="no. is not defined"
+} 
+document.getElementById("num").innerHTML = msg;
+</script>
+<p id="day">number is smaller</p>
+<script>
+var num = 1;
+ switch (num) {
+  case 1:
+    msg = "number is smaller";
+document.getElementById("day").innerHTML = msg;
+    break;
+  case 2:
+    msg = "number is greater";
+document.getElementById("day").innerHTML = msg;
+    break;
+  case 3:
+    msg = "number is equal";
+document.getElementById("day").innerHTML = msg;
+    break;
+  default:
+    msg = "please enter number...";
+document.getElementById("day").innerHTML = msg;
+}
+</script>
+
+
+</body></html>
