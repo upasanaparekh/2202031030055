@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href=
+'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+		rel='stylesheet'>
+</head>
+
+<body>
+<center>
+<h1 style="color:green">controlgroup</h1>
+	<div class="my_games_control_group">
+
+		<label for="radio_1">Men</label>
+		<input type="radio" name="type" id="radio_1">
+		<label for="radio_2">Women</label>
+		<input type="radio" name="type" id="radio_2">
+		<select>
+			<option>Cricket</option>
+			<option>Hockey</option>
+			<option>Tennis</option>
+			<option>Football</option>
+		</select>
+		<label for="official">Official</label>
+		<input type="checkbox"
+			name="official"
+			id="official">
+		<button id="apply">Apply</button>
+	</div>
+
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+</script>
+
+	<script>
+		$(document).ready(function() {
+			
+			$(".my_games_control_group").controlgroup({});
+			
+		})
+	</script>
+</center>
+</body>
+
+</html>

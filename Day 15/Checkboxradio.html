@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Checkboxradio - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "input" ).checkboxradio();
+  } );
+  </script>
+</head>
+<body>
+<div class="widget">
+  <h1>widget rtadio b utton and checkboxes</h1>
+ 
+  <h2>Radio Group</h2>
+  <fieldset>
+    <legend>Select a country: </legend>
+    <label for="radio-1">INDIA</label>
+    <input type="radio" name="radio-1" id="radio-1">
+    <label for="radio-2">SWITZERLAND</label>
+    <input type="radio" name="radio-1" id="radio-2">
+    <label for="radio-3">LONDON<label>
+    <input type="radio" name="radio-1" id="radio-3">
+  </fieldset>
+ 
+  <h2>Checkbox</h2>
+  <fieldset>
+    <legend>HOBBIES</legend>
+    <label for="checkbox-1">READING</label>
+    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+    <label for="checkbox-2">WRITING</label>
+    <input type="checkbox" name="checkbox-2" id="checkbox-2">
+    <label for="checkbox-3">DANCING</label>
+    <input type="checkbox" name="checkbox-3" id="checkbox-3">
+    <label for="checkbox-4">SINGING</label>
+    <input type="checkbox" name="checkbox-4" id="checkbox-4">
+  </fieldset>
+ 
+  <h2>Checkbox nested in label</h2>
+  <fieldset>
+    <legend>FAVOURITE FOODS: </legend>
+    <label for="checkbox-nested-1">CHOCOLATE
+      <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+    </label>
+    <label for="checkbox-nested-2">ICE-CREAM
+      <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+    </label>
+    <label for="checkbox-nested-3">COLD-DRINK
+      <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+    </label>
+    <label for="checkbox-nested-4">FAST-FOOD
+      <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+    </label>
+  </fieldset>
+</div>
+ 
+ 
+</body>
+</html>
