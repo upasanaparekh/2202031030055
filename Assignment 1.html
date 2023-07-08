@@ -1,0 +1,570 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>My Profile</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"
+        language="javascript"></script>
+
+    <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+    <script src="JS/wow.min.js" type="text/javascript"></script>
+    <link href="CSS/animate.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+
+    <style type="text/css">
+        #HeaderDiv a.navbar-brand {
+            font-family: Monotype Corsiva;
+            font-size: 25px;
+            color: #ffffff;
+        }
+
+        #navbarCollapse li b {
+            color: #ffffff;
+        }
+
+        .fullscreen_bg {
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .fullscreen_bg_video {
+            position: absolute;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        #Home {
+            height: auto;
+            padding-bottom: 40px;
+            color: #333D79FF;
+            font-weight: bold
+        }
+
+        #HomeRow {
+            padding-top: 7%;
+        }
+
+        #HomeRow a i.fa {
+            color: #333D79FF;
+        }
+
+        #HomeRow div.col-lg-offset-3 {
+            background: white(0, 0, 0, 0.7);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #333D79FF;
+        }
+
+        #TechnicalSummary {
+            height: auto;
+            padding-bottom: 40px;
+            color:#333D79FF;
+            background-attachment: fixed;
+            background-image: url('Images/b1.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        #TechnicalSummaryRow {
+            padding-top: 7%;
+        }
+
+        #TechnicalSummary h1 {
+            font-family: Monotype Corsiva;
+        }
+
+        #Qualifications {
+            background-attachment: fixed;
+            background-image: url('Images/Skills_Image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+            padding-bottom: 40px;
+            color: #333D79FF;
+        }
+
+        #QualificationsRow {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #QualificationsRow div.col-lg-offset-1 {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0px 0px 18px #333D79FF;
+
+        }
+
+        #Qualifications table {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        #Qualifications table tr td {
+            padding-bottom: 20px;
+            color: #333D79FF;
+        }
+
+        #Qualifications table tr td:first-child {
+            width: 30%;
+            padding-left: 10px;
+        }
+
+        #Skills {
+            background-attachment: fixed;
+            background-image: url('Images/Skills_Image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+            padding-bottom: 40px;
+            color:#333D79FF;
+        }
+
+        #SkillsRow {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #SkillsRow div.col-lg-offset-5 {
+            padding: 10px;
+            background-color: #DCDCDC;
+            border-radius: 8px;
+            box-shadow: 0px 0px 18px #333D79FF;
+            opacity: 0.8;
+        }
+
+        #Skills table {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        #Skills table tr td {
+            padding-bottom: 20px;
+            color:#333D79FF;
+        }
+
+        #Skills table tr td:first-child {
+            width: 30%;
+            padding-left: 10px;
+        }
+
+
+
+        #Portfolio {
+            height: auto;
+            padding-bottom: 40px;
+            color: rgb(6, 38, 145);
+            font-size: 20px;
+
+        }
+
+        #PortfolioRow h1 {
+            color:rgb(4, 40, 82);
+            font-family: Monotype Corsiva;
+        }
+
+        #Portfolio div.col-lg-3 {
+            margin-bottom: 20px;
+        }
+
+        .ContainerImage {
+            position: relative;
+            width: 100%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: 200px;
+            transition: 1s;
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .ContainerImage:hover .overlay {
+            opacity: 1;
+        }
+
+        .ContainerImage:hover .image {
+            transform: rotate(360deg);
+        }
+
+        .text {
+            color:rgb(51, 65, 134);
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        @media(max-width:768px) {
+            .fullscreen_bg_video {
+                left: -160%;
+                width: 260%;
+            }
+
+            #TechnicalSummary {
+                height: auto;
+            }
+        }
+
+        @media(max-width:992px) {
+            #HomeRow {
+                padding-top: 17%;
+            }
+
+            #TechnicalSummaryRow {
+                padding-top: 17%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top" style="z-index:1000;">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" id="HeaderDiv">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Upasana Parekh</a>
+            </div>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" style="font-size:13px;padding-right:15px;">
+                    <li><a href="#Home"><b>Intro</b></a>
+                    <li><a href="#TechnicalSummary"><b>Technical Summary</b></a></li>
+                    <li><a href="#Qualifications"><b>Qualifications</b></a></li>
+                    <li><a href="#Skills"><b>Skills</b></a></li>
+                    <li><a href="#Portfolio"><b>Portfolio</b></a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="Home" class="fullscreen_bg">
+        <video src="c:\Users\Upashna\Downloads\upasana\computer.mp4.mp4" autoplay loop muted class="fullscreen_bg_video"></video>
+        <div class="row" id="HomeRow">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-lg-6 col-md-6 col-sm-8 col-xs-12 wow slideInDown"
+                data-wow-duration="3s">
+                <center><img src="c:\Users\Upashna\Downloads\upasana\upasana.jpeg.jpeg" alt="Upasana Parekh" height="300px" width="40%" /></center>
+                <center>
+                    <h2>I'M Upasana Parekh</h2>
+                </center>
+                <center>
+                    <h5>Student</h5>
+                    <hr />
+                </center>
+                <div class="row">
+                    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-5 col-md-5 col-sm-5">
+                        <center><i class="fa fa-2x fa-phone"></i> +91 9183883956</center>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-6">
+                        <center><i class="fa fa-2x fa-envelope"></i> <a href="mailto:swatichaudhary.ce@socet.edu.com" style="color:#333D79FF;">Upasana31@gmail.com</a></center>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-10 col-sm-10">
+                        <center><i class="fa fa-2x fa-map-marker"></i> ramdevnagar, Ahmedabad-380015</center>
+                    </div>
+                </div>
+                <hr />
+                <center><a href="#"><i class="fa fa-2x fa-facebook-square"></i> &nbsp;
+                    <i class="fa fa-2x fa-twitter-square"></i>&nbsp;
+                    <i class="fa fa-2x fa-linkedin-square"></i> &nbsp;
+                    <a href="https://www.instagram.com/accounts/login/"><i class="fa fa-2x fa-instagram"></i></a></center>
+            </div>
+        </div>
+    </div>
+
+    <div id="TechnicalSummary" class="container-fluid wow bounceIn" data-wow-duration="3s">
+        <div class="row" id="TechnicalSummaryRow">
+            <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-10 col-sm-10">
+                <h1 class="text-center"><i class="fa fa-gears"></i> Technical Summary</h1>
+                <hr />
+                <ul>
+                    <li>An Information & Technology Engineer Diploma From LJ Polytechnic – Gujarat
+                        Technologycal University</li>
+                    
+                    <li>Knowledge of C++,python,software Engineering DataBase Managment System</li>
+                    <li>Core Knowledge of HTML,CSS,JavaScript,Bootstrap</li>
+                    <li>Also have Knowledge of Programming in Javascript,PHP</li>
+                    <li>Now I am  Studying at Silver Oak University</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Qualifications" class="container-fluid">
+        <div class="row" id="QualificationsRow">
+            <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-6 col-md-6 col-sm-6 wow slideInLeft"
+                data-wow-duration="3s">
+                <br />
+                <h2 class="text-center"><i class="fa fa-object-group"></i> Education Qualification</h2>
+                <hr />
+                <table class="table table-responsive">
+                    <tr>
+                        <td>Year<br />2017 - 2020</td>
+                        <td>Diploma in Information Technology <br /> from LJ Polytechnic <br />
+                            GTU<br /> (Throughout First Class with Distinction).</td>
+                    </tr>
+                    <tr>
+                        <td>Year<br />2021 - 2024(under Graduation)</td>
+                        <td>B.Tech in Information Technology <br />from Aditya Silver Oak College <br /> Silver Oak
+                            University<br /> (Throughout First Class with Distinction).</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="Skills" class="container-fluid">
+        <div class="row" id="SkillsRow">
+            <div class="col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-lg-6 col-md-6 col-sm-6 wow slideInRight"
+                data-wow-duration="3s">
+                <center><br />
+                    <h2><i class="fa fa-object-group"></i> Technical Skills</h2>
+                    <hr />
+                </center>
+                <table>
+                    <tr>
+                        <td>Programming Languages:</td>
+                        <td>C, C++, Java, JavaScript, Python ,Php</td>
+                    </tr>
+
+                    <tr>
+                        <td>Databases:</td>
+                        <td> MySQL,SQl </td>
+                    </tr>
+                    <tr>
+                        <td>Operating Systems:</td>
+                        <td>Microsoft Windows.</td>
+                    </tr>
+                    <tr>
+                        <td>Others:</td>
+                        <td>Multithreading,OOPS</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="Portfolio" class="container-fluid wow bounceIn" data-wow-duration="3s" style="width: 100%; background-image:url('Images/b1.webp') ; color: #333D79FF;"
+        <div class="row" id="PortfolioRow">
+            <center><br />
+                <h1><i class="fa fa-object-group"></i> My Portfolio</h1>
+                <hr />
+            </center>
+            
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="c:\Users\Upashna\Pictures\IMG\python.png" alt="Upasana" class="image" />
+                    <div class="overlay">
+                        <div class="text">PYTHON</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="c:\Users\Upashna\Downloads\upasana\php.png.png" alt="Upasana" class="image" />
+                    <div class="overlay">
+                        <div class="text">PHP</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="c:\Users\Upashna\Pictures\IMG\jquery.png" alt="Upasana" class="image" />
+                    <div class="overlay">
+                        <div class="text">JQUERY</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="c:\Users\Upashna\Downloads\upasana\javascript.jpg" alt="Upasana" class="image" />
+                    <div class="overlay">
+                        <div class="text">JAVA SCRIPT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="c:\Users\Upashna\Downloads\upasana\java.png" alt="Upasana" class="image" />
+                    <div class="overlay">
+                        <div class="text">JAVA</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="c:\Users\Upashna\Downloads\upasana\HTML1.jpg" alt="Upasana" class="image" />
+                    <div class="overlay">
+                        <div class="text">HTML</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="c:\Users\Upashna\Downloads\upasana\github1.png" alt="Upasana" class="image" />
+                    <div class="overlay">
+                        <div class="text">GITHUB</div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="c:\Users\Upashna\Downloads\upasana\c++.png" alt="Upasana" class="image" />
+                    <div class="overlay">
+                        <div class="text">C++</div>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+            
+    </div>
+<div class="container-fluid wow bounceIn" data-wow-duration="3s" style="width: 100%; background-image:url('Images/b1.webp')">
+    
+  <!--Section: Contact v.2-->
+<section class="mb-4" style=" margin-top:50px;padding:10px;margin-left: 50px; background-size: cover; background:transparent; color: #333D79FF">
+
+    <!--Section heading-->
+    <center><h2 class="h1-responsive font-weight-bold text-center my-4" style="margin: 10px; color: #333D79FF">Contact us</h2></center>    
+
+    <div class="row" >
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="myprofile.html" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit()">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+<!--Grid column-->
+<div class="col-md-3 text-center">
+    <ul class="list-unstyled mb-0" style="color:#333D79FF;">
+        <li><a href="https://goo.gl/maps/1QG4d5qUix2F1nxA6"><i class="fa fa-2x fa-map-marker"></i></a>
+            <p>ramdevnagar,Ahemedabad-380015</p>
+        </li>
+
+        <li><a href="tel:2134567890"><i class="fa fa-2x fa-phone"></i> </a>
+            <p>+91- 2134567890</p>
+        </li>
+
+        <li><a href="https://mail.google.com"><i class="fa fa-2x fa-envelope"></i></a>
+            <p>Upasana31@gmail.com</p>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fa fa-2x fa-instagram"></i></a>
+            <p>upasana_parekh</p>
+        </li>
+    </ul>
+</div>
+<!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+</div>
+</body>
+
+</html>
